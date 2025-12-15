@@ -1,6 +1,6 @@
 
 ```markdown
-# 🌐 Personal Portfolio Website
+🌐 Personal Portfolio Website
 
 This repository contains my personal portfolio website, developed to professionally present my projects, technical skills, experience, and certifications.  
 The website is designed with a **modular, scalable, and maintainable architecture**, focusing on performance, clarity, and user experience.
@@ -23,35 +23,29 @@ The project follows best practices in front-end development with a clean separat
 
 ## 📁 Project Structure
 
-```
-
 portfolio/
-├── css/                    # Modular CSS architecture
-│   ├── base.css           # Global variables, reset, and core styles
-│   ├── navbar.css         # Navigation bar
-│   ├── hero.css           # Hero section
-│   ├── about.css          # About section
-│   ├── skills.css         # Skills section
-│   ├── projects.css       # Projects showcase
-│   ├── experience.css     # Experience timeline
-│   ├── certifications.css # Certifications section
-│   ├── contact.css        # Contact form
-│   ├── footer.css         # Footer
-│   └── responsive.css     # Responsive breakpoints
+├── css/ # Modular CSS architecture
+│ ├── base.css # Global variables, reset, and core styles
+│ ├── navbar.css # Navigation bar
+│ ├── hero.css # Hero section
+│ ├── about.css # About section
+│ ├── skills.css # Skills section
+│ ├── projects.css # Projects showcase
+│ ├── experience.css # Experience timeline
+│ ├── certifications.css # Certifications section
+│ ├── contact.css # Contact form
+│ ├── footer.css # Footer
+│ └── responsive.css # Responsive breakpoints
 │
-├── js/                     # Modular JavaScript files
-│   ├── theme.js           # Dark / light theme toggle
-│   ├── typing-animation.js # Hero typing animation
-│   ├── 3d-background.js   # Three.js animated background
-│   ├── animations.js      # Scroll-based animations
-│   ├── contact-form.js    # EmailJS form handling
-│   └── README.md          # JavaScript documentation
+├── js/ # Modular JavaScript files
+│ ├── theme.js # Dark / light theme toggle
+│ ├── typing-animation.js # Hero typing animation
+│ ├── 3d-background.js # Three.js animated background
+│ ├── animations.js # Scroll-based animations
+│ ├── contact-form.js # EmailJS form handling
+│ └── README.md # JavaScript documentation
 │
-├── index.html             # Main entry point
-├── style.css              # Deprecated (can be removed)
-└── script.js              # Deprecated (can be removed)
-
-```
+├── index.html # Main entry point
 
 ---
 
