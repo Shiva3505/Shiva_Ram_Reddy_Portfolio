@@ -1,0 +1,228 @@
+/* Root Variables & Reset */
+:root {
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    scroll-behavior: smooth;
+}
+
+/* Dark Mode (Default) */
+:root {
+    --primary-purple: #a855f7;
+    --primary-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-pink: #ec4899;
+
+    --dark-bg: #0a0a0f;
+    --dark-bg-secondary: #11111b;
+
+    --card-bg: rgba(17, 17, 27, 0.8);
+    --card-border: rgba(168, 85, 247, 0.2);
+
+    --text-primary: #e5e7eb;
+    --text-secondary: #9ca3af;
+
+    --accent-glow: rgba(168, 85, 247, 0.3);
+
+    --gradient-primary: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+    --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    --gradient-accent: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+
+    --particle-color: rgba(168, 85, 247, 0.5);
+    --navbar-bg: rgba(10, 10, 15, 0.95);
+}
+
+/* Premium Light Mode - Clean & Simple */
+[data-theme="light"] {
+    --primary-purple: #7c3aed;
+    --primary-blue: #2563eb;
+    --accent-cyan: #06b6d4;
+    --accent-pink: #db2777;
+
+    /* Soft Gradient Background - More Attractive */
+    --dark-bg: linear-gradient(135deg, #f0f9ff 0%, #faf5ff 100%);
+    --dark-bg-secondary: #ffffff;
+
+    /* Clean White Cards with Subtle Tint */
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: rgba(124, 58, 237, 0.1);
+
+    /* High Contrast Text */
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+
+    --accent-glow: rgba(124, 58, 237, 0.15);
+
+    /* Vibrant Gradients */
+    --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+    --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+
+    --particle-color: rgba(37, 99, 235, 0.5);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode gradient background */
+[data-theme="light"] body {
+    background: linear-gradient(135deg, #f0f9ff 0%, #faf5ff 100%);
+    background-attachment: fixed;
+}
+
+
+/* Canvas Background */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Styling */
+section {
+    padding: 8rem 0;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    animation: gradientShift 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(20deg);
+    }
+}
+
+/* Card Styles - Premium Enhanced */
+.project-card,
+.cert-card,
+.skill-category,
+.education-card,
+.timeline-content,
+.leadership-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Premium Glow Effect on Hover */
+.project-card::before,
+.cert-card::before,
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover::before,
+.cert-card:hover::before,
+.skill-category:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover,
+.cert-card:hover,
+.skill-category:hover,
+.education-card:hover,
+.leadership-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.25);
+    border-color: transparent;
+}
+
+/* Light Mode Premium Card Styles */
+[data-theme="light"] .project-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .skill-category,
+[data-theme="light"] .education-card,
+[data-theme="light"] .timeline-content,
+[data-theme="light"] .leadership-card {
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .cert-card:hover,
+[data-theme="light"] .skill-category:hover,
+[data-theme="light"] .education-card:hover,
+[data-theme="light"] .leadership-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.3);
+}

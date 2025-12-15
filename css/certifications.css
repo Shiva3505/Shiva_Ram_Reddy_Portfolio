@@ -1,0 +1,45 @@
+/* Certifications Section */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cert-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.cert-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.cert-issuer {
+    color: var(--primary-purple);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Cert card link wrapper */
+.cert-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.cert-card-link:hover .cert-card {
+    border-color: var(--primary-purple);
+    transform: translateY(-5px);
+}
