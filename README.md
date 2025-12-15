@@ -1,5 +1,3 @@
-Here is a **more professional, clean, and industry-standard README.md**, written **in first person**, suitable for recruiters and GitHub profile viewers.
-You can **copy-paste this directly** into GitHub.
 
 ```markdown
 # 🌐 Personal Portfolio Website
