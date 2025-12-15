@@ -158,3 +158,4 @@ The following files can be safely deleted:
 - **Team Collaboration**: Multiple developers can work simultaneously
 - **Smaller Files**: Easier to understand and debug
 - **Performance**: Can load only needed sections (future optimization)
+"# Shiva_Ram_Reddy_Portfolio" 
